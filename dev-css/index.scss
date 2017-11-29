@@ -1,0 +1,306 @@
+// begin RFF common styles
+   
+//colors
+$dark_gray: #58585b;
+$light_gray: #E6E7E8;
+$white: #fff;
+$blue: #051839; 
+
+//fonts
+$sans: "Oswald","Trade Gothic W01",Helvetica,Arial,"Nimbus Sans L",sans-serif;
+$serif: calluna,"Calluna W01",Georgia,"Times New Roman","DejaVu Serif", serif;
+  
+* { 
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    color: $dark_gray;
+    font: 17.6px/23.1px $serif;
+    /*max-width: 728px;*/
+}
+
+
+#rff-app {
+        -webkit-text-size-adjust:100%;
+        border: 1px solid $blue;
+        margin-bottom: 1em;
+        position: relative;
+        > h2 {
+            padding: 10px;
+            background: $blue;
+            color: $white;
+            margin-bottom: 10px;
+        }
+
+    .margins {
+        padding: 10px 10px 0;
+    }
+    .margins-bottom {
+        padding-bottom:10px;
+    }
+    .dropdowns {
+        margin: 0 auto;
+        label {
+            position: relative;
+            padding-right: 10px;
+            font-family: $serif;
+            font-size: 100%;
+            font-weight: bold;
+        }
+        select {
+            position: relative;
+            top: 3px;
+            width: initial;
+            line-height:140%;        
+        }
+        > div {
+            margin-bottom: 10px;
+        }
+    }
+    .attention {
+        &:before {
+            content: '!';
+            position: absolute;
+            left: 9px;
+            color: $white;
+            z-index: 1;
+            top: -1px;
+        }
+        &:after {
+            content: '\025B2';
+            position: absolute;
+            left: -4px;
+            font-size: 181%;
+            top: -1px;
+            color:$blue;
+        }
+    }
+
+    .credits {
+        color: $light_gray;
+        font-size: 75%;
+        a {
+            color: inherit; 
+        }
+    }
+    h2 {
+        font: bold 25.3px/33px $sans;
+        letter-spacing: -0.32px;
+    }
+    h3 {
+        font: bold 21.12px/27.5px $sans;
+        letter-spacing: -0.264px;
+    }
+
+    .no-display {
+        display: none;
+    }
+    .no-margin {
+        margin: 0;
+    }
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .flex-column {
+        flex-direction: column;
+    }
+    .space-around {
+        justify-content: space-around;
+    }
+    .flex-start {
+        justify-content: flex-start;
+
+    }
+    .grow {
+        flex-grow: 1;
+    }
+    .shrink {
+        flex-shrink: 1;
+    }
+    .no-wrap {
+        flex-wrap: nowrap;
+    }
+/* END common RFF app styles */
+
+    #dropdown-wrapper {
+        position: absolute;
+        width: 100%;
+        background-color: $light_gray;
+        z-index: 9;
+        transition: opacity 0.2s linear;
+        height: 67px;
+        &.fixed {
+            position: fixed;
+            top:0;
+            border-bottom: 1px solid $dark_gray;
+            will-change: scroll-position;
+            width: 100%;
+            max-width: 726px;
+        }
+        &.fade {
+            opacity: 0;
+        }
+    }
+    
+    #d3-content {
+        margin-top: 43px;
+        height: 564px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;    
+    }
+
+
+
+    .category {
+        padding-bottom: 10px;
+        .category-heading {
+            background-color: $light_gray;
+            border-top: 2px solid $blue;
+            align-items: flex-end;
+        }
+        h3 {
+            text-transform: uppercase;
+            position: relative;
+            bottom: 3px;
+            
+            padding-right: 10px;
+        }
+        
+    }
+
+    .column-label {
+        font-style: italic;
+    }
+
+    #footer {
+        background-color: $blue;
+    }
+
+    .chart-wrapper, .label-price {
+        width:160px;
+        padding-left: 10px;
+    }
+
+    .chart-container {
+        width: calc(100% - 35px);
+        position: relative;
+        height: 30px;
+        
+    }
+
+    .co2-emissions, .label-co2-emissions {
+        width: 155px;
+        padding-left: 10px;
+    }
+
+    .fuel-name, .label-fuel {
+        width: 150px;
+    }
+
+    .tax-per-unit, .label-tax {
+        width: 120px;
+        padding-left: 10px;
+    }
+
+    .price-div {
+           top: 3px;
+    position: relative;
+    white-space: nowrap;
+        font-size: 80%;
+        color: #959595;
+    }
+
+   
+
+    .no-prices {
+        .label-price, .prices, .chart-wrapper {
+            display:none;
+        }
+        .fuel-data, .data-headings {
+            justify-content: space-evenly;
+            flex-grow: 1;
+        }
+    }
+
+    .bar {
+        height: 14px;
+        width: 100%;
+        background-color: $blue;
+        top: 4px;
+        position: relative;
+        transform-origin: left center;
+    }
+
+    .bar-null {
+        display: none;
+    }
+
+    .percent-div {
+        position: absolute;
+        bottom: 8px;
+    }
+
+    .null-value {
+        display: none;
+    }
+
+     .fuel:not(:last-child):not(.column-labels) {
+            border-bottom: 1px solid $light_gray;
+            padding-bottom: 5px;
+        }
+
+    @media screen and (max-width: 475px) {
+        .data-headings, .column-labels {
+            display:none;
+        }
+        .fuel-name {
+            width: 100%;
+        }
+        .fuel-data {
+            flex-direction: column;
+        }
+        .fuel {
+            padding-bottom: 10px;
+        }
+        .co2-emissions,  .tax-per-unit,  .chart-wrapper  {
+            width: 100%;
+        }
+        .co2-emissions:before,  .tax-per-unit:before,  .chart-wrapper:before  {
+            content: 'kg CO\2082: ';
+            display: block;
+            float: left;
+            height: 30px;
+            margin-right: 10px;
+            font-style: italic;
+            width: 100px;
+            text-align: right;
+        }
+        .co2-emissions:before {
+            content: 'kg CO\2082: ';
+        }
+
+        .tax-per-unit:before  {
+            content: 'carbon tax: ';
+        }
+        .chart-wrapper:before  {
+            content: 'price change: ';
+        }
+        .chart-container {
+            width: calc(100% - 145px);
+        }
+
+        .fuel:not(:last-child):not(.column-labels) {
+            border-bottom-color: $dark_gray;
+            padding-bottom: 15px;
+        }
+
+    }
+
+} /* end styles nested in #rff-app */
+
+
