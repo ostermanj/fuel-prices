@@ -2,8 +2,6 @@ excel/
 .DS_Store
 node_modules/
 .sass-cache
-css/
 dev-js/index.js
 dev-css/index.css
 dev-css/index.css.map
-js/

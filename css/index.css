@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  color: #58585b;
+  font: 17.6px/23.1px calluna, "Calluna W01", Georgia, "Times New Roman", "DejaVu Serif", serif;
+  /*max-width: 728px;*/ }
+
+#rff-app {
+  -webkit-text-size-adjust: 100%;
+  border: 1px solid #051839;
+  margin-bottom: 1em;
+  position: relative;
+  /* END common RFF app styles */ }
+
+#rff-app > h2 {
+    padding: 10px;
+    background: #051839;
+    color: #fff;
+    margin-bottom: 10px; }
+
+#rff-app .margins {
+    padding: 10px 10px 0; }
+
+#rff-app .margins-bottom {
+    padding-bottom: 10px; }
+
+#rff-app .dropdowns {
+    margin: 0 auto; }
+
+#rff-app .dropdowns label {
+      position: relative;
+      padding-right: 10px;
+      font-family: calluna, "Calluna W01", Georgia, "Times New Roman", "DejaVu Serif", serif;
+      font-size: 100%;
+      font-weight: bold; }
+
+#rff-app .dropdowns select {
+      position: relative;
+      top: 3px;
+      width: initial;
+      line-height: 140%; }
+
+#rff-app .dropdowns > div {
+      margin-bottom: 10px; }
+
+#rff-app .attention:before {
+    content: '!';
+    position: absolute;
+    left: 9px;
+    color: #fff;
+    z-index: 1;
+    top: -1px; }
+
+#rff-app .attention:after {
+    content: '\025B2';
+    position: absolute;
+    left: -4px;
+    font-size: 181%;
+    top: -1px;
+    color: #051839; }
+
+#rff-app .credits {
+    color: #E6E7E8;
+    font-size: 75%; }
+
+#rff-app .credits a {
+      color: inherit; }
+
+#rff-app h2 {
+    font: bold 25.3px/33px "Oswald", "Trade Gothic W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    letter-spacing: -0.32px; }
+
+#rff-app h3 {
+    font: bold 21.12px/27.5px "Oswald", "Trade Gothic W01", Helvetica, Arial, "Nimbus Sans L", sans-serif;
+    letter-spacing: -0.264px; }
+
+#rff-app .no-display {
+    display: none; }
+
+#rff-app .no-margin {
+    margin: 0; }
+
+#rff-app .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+
+#rff-app .flex-column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+#rff-app .space-around {
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+
+#rff-app .flex-start {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+
+#rff-app .grow {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+
+#rff-app .shrink {
+    -ms-flex-negative: 1;
+        flex-shrink: 1; }
+
+#rff-app .no-wrap {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+
+#rff-app #dropdown-wrapper {
+    position: absolute;
+    width: 100%;
+    background-color: #E6E7E8;
+    z-index: 9;
+    transition: opacity 0.2s linear;
+    height: 67px; }
+
+#rff-app #dropdown-wrapper.fixed {
+      position: fixed;
+      top: 0;
+      border-bottom: 1px solid #58585b;
+      will-change: scroll-position;
+      width: 100%;
+      max-width: 726px; }
+
+#rff-app #dropdown-wrapper.fade {
+      opacity: 0; }
+
+#rff-app #d3-content {
+    margin-top: 43px;
+    height: 564px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; }
+
+#rff-app .category {
+    padding-bottom: 10px; }
+
+#rff-app .category .category-heading {
+      background-color: #E6E7E8;
+      border-top: 2px solid #051839;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end; }
+
+#rff-app .category h3 {
+      text-transform: uppercase;
+      position: relative;
+      bottom: 3px;
+      padding-right: 10px; }
+
+#rff-app .column-label {
+    font-style: italic; }
+
+#rff-app #footer {
+    background-color: #051839; }
+
+#rff-app .chart-wrapper, #rff-app .label-price {
+    width: 160px;
+    padding-left: 10px; }
+
+#rff-app .chart-container {
+    width: calc(100% - 35px);
+    position: relative;
+    height: 30px; }
+
+#rff-app .co2-emissions, #rff-app .label-co2-emissions {
+    width: 155px;
+    padding-left: 10px; }
+
+#rff-app .fuel-name, #rff-app .label-fuel {
+    width: 150px; }
+
+#rff-app .tax-per-unit, #rff-app .label-tax {
+    width: 120px;
+    padding-left: 10px; }
+
+#rff-app .price-div {
+    top: 3px;
+    position: relative;
+    white-space: nowrap;
+    font-size: 80%;
+    color: #959595; }
+
+#rff-app .no-prices .label-price, #rff-app .no-prices .prices, #rff-app .no-prices .chart-wrapper {
+    display: none; }
+
+#rff-app .no-prices .fuel-data, #rff-app .no-prices .data-headings {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+
+#rff-app .bar {
+    height: 14px;
+    width: 100%;
+    background-color: #051839;
+    top: 4px;
+    position: relative;
+    -webkit-transform-origin: left center;
+            transform-origin: left center; }
+
+#rff-app .bar-null {
+    display: none; }
+
+#rff-app .percent-div {
+    position: absolute;
+    bottom: 8px; }
+
+#rff-app .null-value {
+    display: none; }
+
+#rff-app .fuel:not(:last-child):not(.column-labels) {
+    border-bottom: 1px solid #E6E7E8;
+    padding-bottom: 5px; }
+
+@media screen and (max-width: 475px) {
+    #rff-app .data-headings, #rff-app .column-labels {
+      display: none; }
+    #rff-app .fuel-name {
+      width: 100%; }
+    #rff-app .fuel-data {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    #rff-app .fuel {
+      padding-bottom: 10px; }
+    #rff-app .co2-emissions, #rff-app .tax-per-unit, #rff-app .chart-wrapper {
+      width: 100%; }
+    #rff-app .co2-emissions:before, #rff-app .tax-per-unit:before, #rff-app .chart-wrapper:before {
+      content: 'kg CO\2082: ';
+      display: block;
+      float: left;
+      height: 30px;
+      margin-right: 10px;
+      font-style: italic;
+      width: 100px;
+      text-align: right; }
+    #rff-app .co2-emissions:before {
+      content: 'kg CO\2082: '; }
+    #rff-app .tax-per-unit:before {
+      content: 'carbon tax: '; }
+    #rff-app .chart-wrapper:before {
+      content: 'price change: '; }
+    #rff-app .chart-container {
+      width: calc(100% - 145px); }
+    #rff-app .fuel:not(:last-child):not(.column-labels) {
+      border-bottom-color: #58585b;
+      padding-bottom: 15px; } }
+
+/* end styles nested in #rff-app */
